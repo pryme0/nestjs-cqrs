@@ -1,0 +1,57 @@
+{
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "inferenceAccelerators": [],
+    "containerDefinitions": [
+        {
+            "name": "paymaispaicontainerv2",
+            "image": "132922570704.dkr.ecr.eu-west-1.amazonaws.com/paymaisapiv2",
+            "memoryReservation": "128",
+            "resourceRequirements": null,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": "8000",
+                    "protocol": "tcp"
+                }
+            ],
+            "entryPoint": [],
+            "command": [],
+            "environment": null,
+            "environmentFiles": [],
+            "secrets": null,
+            "mountPoints": null,
+            "volumesFrom": null,
+            "hostname": null,
+            "user": null,
+            "workingDirectory": null,
+            "extraHosts": null,
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/paymaisapiv2",
+                    "awslogs-region": "eu-west-1",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            },
+            "ulimits": null,
+            "dockerLabels": null,
+            "dependsOn": null,
+            "repositoryCredentials": {
+                "credentialsParameter": ""
+            }
+        }
+    ],
+    "volumes": [],
+    "networkMode": "awsvpc",
+    "memory": "512",
+    "cpu": "256",
+    "executionRoleArn": "arn:aws:iam::132922570704:role/ecsTaskExecutionRole",
+    "taskRoleArn": "arn:aws:iam::132922570704:role/ecsTaskExecutionRole",
+    "family": "paymaisapiv2",
+    "runtimePlatform": {
+        "operatingSystemFamily": "LINUX"
+    },
+    "tags": []
+}

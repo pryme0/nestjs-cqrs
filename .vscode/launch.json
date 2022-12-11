@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "name": "Docker Node.js Launch",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug",
+            "platform": "node",
+            "node": {
+                "package": "${workspaceFolder}/node_modules/@ampproject/remapping/node_modules/@jridgewell/gen-mapping/package.json",
+                "localRoot": "${workspaceFolder}/node_modules/@ampproject/remapping/node_modules/@jridgewell/gen-mapping"
+            }
+        }
+    ]
+}
